@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: chatgpt-translator
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
